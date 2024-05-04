@@ -1,0 +1,24 @@
+server:
+  port: 5000
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/movie?useSSL=false
+    username: root
+    password: root
+  jpa:
+    hibernate.ddl-auto: update
+  application:
+    name: MovieMS
+  cloud:
+    consul:
+      discovery:
+        hostname: localhost
+
+General:
+  EXCEPTION_MESSAGE: Request could not be proccessed. General Exception
+Service:
+  MOVIE_NOT_FOUND: Movie not found. Please enter valid movie id. Service Exception
+
+API:
+  MOVIE_UPLOADED_SUCCESSFULLY: Movie uploaded successfully
